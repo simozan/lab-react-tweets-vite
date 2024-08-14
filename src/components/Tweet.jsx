@@ -1,25 +1,20 @@
+import { ProfileImage } from "./ProfileImage";
+import { User } from "./User";
+import { Timestamp } from "./Timestamp";
+
 function Tweet(Props) {
   return (
     <div className="tweet">
-      <img
-        src= {Props.image}
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={Props.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{Props.name}</span>
-            <span className="handle">{Props.handle}</span>
-          </span>
+          <User name={Props.name} handle={Props.handle} />
+          <Timestamp timestamp={Props.timestamp}/>
 
-          <span className="timestamp">{Props.timestamp}</span>
         </div>
 
-        <p className="message">
-        {Props.message}
-        </p>
+        <p className="message">{Props.message}</p>
 
         <div className="actions">
           {/* Font Awesome icons */}
