@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Message = () => {
+export const Message = (Props) => {
   return (
-    <div>good</div>
+    <p className="message">{Props.message}</p>
   )
 }
